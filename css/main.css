@@ -1,0 +1,37 @@
+header{
+  padding: 3em 0 ;
+  margin-top: 20px;
+  background-image: url("../img/head_bg.gif");
+}
+header .container{
+  color: #fff;
+  text-align: center;
+}
+header .container p{
+  font-size: 34px;
+  padding-bottom: 10px;
+}
+header ul{
+  font-size: 0;
+}
+header li{
+  display: inline-block;
+  font-size: 22px;
+  width: 120px;
+}
+footer{
+  color:#fff;
+  text-align: center;
+  margin: 120px 0 0px;
+}
+footer div{
+  margin-bottom: 50px;
+}
+footer img{
+  width: 34px;
+  height: 78px;
+  margin: 0 auto 20px;
+}
+footer p{
+  font-size: 14px;
+}
