@@ -3,7 +3,6 @@ $(function(){
   $('.image-grid img').hover(
     function(){
         /* mouse enter の処理 */
-
         color_class = new Array();
         color_class["1"] = "c_1";
         color_class["2"] = "c_2";
@@ -38,15 +37,57 @@ $(function(){
             code = "33,203,227";
           }
         $(this).css('box-shadow', '0px 0px 0px 5rem rgba('+ code +',0.4)');
+        $(this).css('color', 'rgb('+ code +')');
 
       },
       function(){
         /* mouse leave の処理 */
         $(this).css('box-shadow', '0px 0px 0px 0px ');
         $(this).attr({"alt":""});
+        $(this).css('color', 'transparent ');
 
       }
     )
+
+
+    e_h = 0;
+    $('.art_img').click(function(e){
+//      color = $(this).css('box-shadow');
+      color = $(this).css('background-color');
+    h = $(window).height();
+    $('#disp_img').css('min-height',h);
+      $('#disp_img').css('display','block');
+      $('main').css('display','none');
+      $('header').css('display','none');
+      $('footer').css('display','none');
+      src = $(this).attr('src');
+      $('#disp_img img').attr('src', src);
+      color = $(this).css('color');
+      code = color.split("(");
+      code = code[1];
+      code = code.split(")");
+      code = code[0];
+      code = code.split(",");
+      code = code[0]+","+ code[1]+","+code[2];
+      $('#disp_img').css('background-color','rgba('+ code +',1)');
+//      e_h = $('body').scrollTop();
+      //y = e.screenY;
+      y = window.pageYOffset ;  // Y方向 (縦)
+
+      $('body').scrollTop(0);
+    });
+    $('#close').click(function(){
+      $('#disp_img').css('display','none');
+      $('main').css('display','block');
+      $('header').css('display','block');
+      $('footer').css('display','block');
+      $('body').scrollTop(y);
+      $('.image-grid img').css('box-shadow', '0px 0px 0px 0px ');
+    });
+
+
+
+
 
 
 });

@@ -1,0 +1,9 @@
+DirectoryIndex index.html index.php
+Action myphp-script /php.cgi
+AddHandler myphp-script .php .html
+
+#AuthUserfile /home/kohimoto/www/pass/.htpasswd_coco
+#AuthGroupfile /dev/null
+#AuthName "Please enter your ID and password"
+#AuthType Basic
+#require valid-user

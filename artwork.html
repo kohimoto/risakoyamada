@@ -1,3 +1,4 @@
+<?php require('./art/wp-blog-header.php'); ?>
 
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -31,29 +32,34 @@
 
 <!-- page assets -->
 <script src="js/picturefill.min.js" async="true"></script>
-<link rel='stylesheet' id='main-css'  href='css/master.css' type='text/css' media='screen' />
-<link rel='stylesheet' id='main-css'  href='css/main.css' type='text/css' media='screen' />
-<link rel="canonical" href="" />
+<link rel='stylesheet' id='main-css'  href='/css/master.css' type='text/css' media='screen' />
+<link rel='stylesheet' id='main-css'  href='/css/main.css' type='text/css' media='screen' />
+<!-- hover -->
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/css-classes.min.css">
+
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-
-<!-- lity-->
-<link rel='stylesheet' id='main-css'  href='css/lity.css' type='text/css' media='screen' />
-<script type="text/javascript" src="js/lity.js"></script>
-
 <script type="text/javascript" src="js/colorful.js"></script>
 </head>
+
+<div id="disp_img">
+<div><div id="close">×</div></div>
+<div class="img_s">
+<img src="">
+</div>
+</div>
 
 <body class="home page page-id-16 page-template-default">
 <header>
 	<div class="container">
 		<p>Risako Yamada</p>
 		<ul>
-			<li>Top</li>
-			<li>About</li>
-			<li>Artwork</li>
-			<li>Exhibition</li>
-			<li>Shop</li>
-			<li>Contact</li>
+			<li><a href="" class="element linethrough-right">Top</a></li>
+			<li><a href="" class="element2 linethrough-right">About</a></li>
+			<li><a href="" class="element3 linethrough-right">Artwork</a></li>
+			<li><a href="" class="element4 linethrough-right">Exhibition</a></li>
+			<li><a href="" class="element5 linethrough-right">Shop</a></li>
+			<li><a href="" class="element6 linethrough-right">Contact</a></li>
 		</ul>
 	</div>
 </header>
@@ -62,95 +68,93 @@
 	<section class="page-homepage">
 	<article class="image-grid home-image-grid">
 	<div class="wrap image-grid-inner">
+
+	<?
+
+    $n_posts = query_posts();
+	  $img_num = 0;
+    foreach ($n_posts as $n_p) :
+		  $n_img = get_field("artw_img", $n_p->ID);
+		  if(strlen($n_img["url"]) > 0){
+			  $img_num++;
+			  if($img_num % 3 == 1){
+				  $left_arr[$img_num] = $n_img["url"];
+			  }else if($img_num % 3 == 2){
+				  $center_arr[$img_num] = $n_img["url"];
+			  }else if($img_num % 3 == 0){
+				  $right_arr[$img_num] = $n_img["url"];
+			
+			  }
+		  }
+	?>
+	<?php endforeach; ?>
+
+	<?
+  if(is_array($left_arr) && count($left_arr) > 0){
+	?>
 	<div id="col-1" class="col">
-		<a href="work/2013-12-17 15.01.49-2.jpg" class='grid-image-item' data-lity="data-lity">
+		<?
+	  foreach($left_arr as $lk => $lv){
+		?>
+			<a>
 			<span></span>
 			<picture>
-				<img src='work/2013-12-17 15.01.49-2.jpg' alt='' title='' />
+				<img src='<?=$lv?>' class='art_img'/>
 			</picture>
-		</a>
+			</a>
+		<?
+    }
+		?>
+	</div>
+	<?
+  }
+	?>
 
-		<a href="work/2013-04-16 10.05.20.jpg" class='grid-image-item' data-lity="data-lity">
+	<?
+  if(is_array($center_arr) && count($center_arr) > 0){
+	?>
+	<div id="col-2" class="col">
+	<?
+	  foreach($center_arr as $ck => $cv){
+	?>
+			<a>
 			<span></span>
 			<picture>
-				<img src='work/2013-04-16 10.05.20.jpg' alt='' title='' />
-			</picture>
-		</a>
-
-		<a href="work/2012-09-07 15.25.17.jpg"  class='grid-image-item' data-lity="data-lity">
-			<span></span>
-			<picture>
-				<img src='work/2012-09-07 15.25.17.jpg' alt='' title='' />
-			</picture>
-		</a>
-
-		<a href="work/2012-12-14 16.04.46.jpg"  class='grid-image-item' data-lity="data-lity">
-			<span></span>
-			<picture>
-				<img src='work/2012-12-14 16.04.46.jpg' alt='' title='' />
+	  		<img src='<?=$cv?>'  class='art_img'/>
 			</picture>
 			</a>
 
+	<?
+  }
+	?>
+
 	</div>
-	<div id="col-2" class="col">
-		<a href="work/2014-01-22 00.01.36.jpg" class='grid-image-item' data-lity="data-lity">
-			<span></span>
-			<picture>
-	  		<img src='work/2014-01-22 00.01.36.jpg' alt='' title='' />
-			</picture>
-		</a>
+	<?
+		}
+	?>
+	
+	<?
+  if(is_array($right_arr) && count($right_arr) > 0){
 
-		<a href="work/2013-06-16 19.31.44.jpg"  class='grid-image-item' data-lity="data-lity">
-			<span></span>
-			<picture>
-				<img src='work/2013-06-16 19.31.44.jpg' alt='' title='' />
-			</picture>
-		</a>
-
-		<a href="work/2012-06-01 17.36.21.jpg"  class='grid-image-item' data-lity="data-lity">
-			<span></span>
-			<picture>
-				<img src='work/2012-06-01 17.36.21.jpg' alt='' title='' />
-			</picture>
-		</a>
-
-		<a href="work/2012-06-01 17.10.32.jpg"  class='grid-image-item' data-lity="data-lity">
-			<span></span>
-			<picture>
-				<img src='work/2012-06-01 17.10.32.jpg' alt='' title='' />
-			</picture>
-		</a>
-	</div>
-
+	?>
 	<div id="col-3" class="col">
-		<a href="work/2014-01-22 00.08.55.jpg" class='grid-image-item' data-lity="data-lity">
+	<?
+	  foreach($right_arr as $rk => $rv){
+	?>
+			<a>
 			<span></span>
 			<picture>
-				<img src='work/2014-01-22 00.08.55.jpg' alt='' title='' />
+				<img src='<?=$rv?>'  class='art_img'/>
 			</picture>
-		</a>
-
-		<a href="work/2013-12-21 13.19.22.jpg"  class='grid-image-item' data-lity="data-lity">
-			<span></span>
-			<picture>
-				<img src='work/2013-12-21 13.19.22.jpg' alt='' title='' />
-			</picture>
-		</a>
-
-		<a href="work/2012-12-14 16.03.57.jpg"  class='grid-image-item' data-lity="data-lity">
-			<span></span>
-			<picture>
-				<img src='work/2012-12-14 16.03.57.jpg' alt='' title='' />
-			</picture>
-		</a>
-
-		<a href="work/2012-06-01 17.25.00.jpg"  class='' data-lity="data-lity">
-			<span></span>
-			<picture>
-				<img src='work/2012-06-01 17.25.00.jpg' alt='' title='Equilateral' />
-			</picture>
-		</a>
+			</a>
+	<?
+    }
+	?>
+	
 	</div>
+	<?
+  }
+	?>
 	</div>
 	</article>
 	</section>
@@ -159,12 +163,11 @@
 <footer>
 	<div>
 		<img src="img/sign_foot.png" alt="logo">
-		<p>Copyright © 2017 Risako Yamada. All Rights Reserved.</p>
+		<p>Copyright 2017 Risako Yamada. All Rights Reserved.</p>
 	</div>
 </footer>
 </body>
 </html>
 <!-- Dynamic page generated in 0.146 seconds. -->
 <!-- Cached page generated by WP-Super-Cache on 2017-04-18 03:44:10 -->
-
 <!-- super cache -->
