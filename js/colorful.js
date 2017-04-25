@@ -75,6 +75,7 @@ $(function(){
       y = window.pageYOffset ;  // Y方向 (縦)
 
       $('body').scrollTop(0);
+      $('html').scrollTop(0);
     });
     $('#close').click(function(){
       $('#disp_img').css('display','none');
@@ -82,6 +83,7 @@ $(function(){
       $('header').css('display','block');
       $('footer').css('display','block');
       $('body').scrollTop(y);
+      $('html').scrollTop(y);
       $('.image-grid img').css('box-shadow', '0px 0px 0px 0px ');
     });
 
