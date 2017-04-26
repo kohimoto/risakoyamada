@@ -31,15 +31,15 @@
 <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="">
 
 <!-- page assets -->
-<script src="js/picturefill.min.js" async="true"></script>
+<script src="/js/picturefill.min.js" async="true"></script>
 <link rel='stylesheet' id='main-css'  href='/css/master.css' type='text/css' media='screen' />
 <link rel='stylesheet' id='main-css'  href='/css/main.css' type='text/css' media='screen' />
 <!-- hover -->
 <link rel="stylesheet" href="/css/base.css">
 <link rel="stylesheet" href="/css/css-classes.min.css">
 
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/colorful.js"></script>
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/colorful.js"></script>
 </head>
 
 <div id="disp_img">
@@ -52,15 +52,15 @@
 <body class="home page page-id-16 page-template-default">
 <header>
 	<div class="container">
-		<p>Risako Yamada</p>
-		<ul>
-			<li><a href="" class="element linethrough-right">Top</a></li>
-			<li><a href="" class="element2 linethrough-right">About</a></li>
-			<li><a href="" class="element3 linethrough-right">Artwork</a></li>
-			<li><a href="" class="element4 linethrough-right">Exhibition</a></li>
-			<li><a href="" class="element5 linethrough-right">Shop</a></li>
-			<li><a href="" class="element6 linethrough-right">Contact</a></li>
-		</ul>
+	<p>Risako Yamada</p>
+	<ul>
+		<li><a href="" class="element linethrough-right">Top</a></li>
+		<li><a href="" class="element2 linethrough-right">About</a></li>
+		<li><a href="" class="element3 linethrough-right">Artwork</a></li>
+		<li><a href="" class="element4 linethrough-right">Exhibition</a></li>
+		<li><a href="" class="element5 linethrough-right">Shop</a></li>
+		<li><a href="" class="element6 linethrough-right">Contact</a></li>
+	</ul>
 	</div>
 </header>
 
@@ -71,37 +71,36 @@
 
 	<?
 
-    $n_posts = query_posts();
-	  $img_num = 0;
-    foreach ($n_posts as $n_p) :
-		  $n_img = get_field("artw_img", $n_p->ID);
-		  if(strlen($n_img["url"]) > 0){
-			  $img_num++;
-			  if($img_num % 3 == 1){
-				  $left_arr[$img_num] = $n_img["url"];
-			  }else if($img_num % 3 == 2){
-				  $center_arr[$img_num] = $n_img["url"];
-			  }else if($img_num % 3 == 0){
-				  $right_arr[$img_num] = $n_img["url"];
-			
-			  }
-		  }
+  $n_posts = query_posts();
+  $img_num = 0;
+  foreach ($n_posts as $n_p) :
+    $n_img = get_field("artw_img", $n_p->ID);
+      if(strlen($n_img["url"]) > 0){
+        $img_num++;
+        if($img_num % 3 == 1){
+          $left_arr[$img_num] = $n_img["url"];
+        }else if($img_num % 3 == 2){
+          $center_arr[$img_num] = $n_img["url"];
+        }else if($img_num % 3 == 0){
+          $right_arr[$img_num] = $n_img["url"];
+        }
+      }
 	?>
-	<?php endforeach; ?>
+  <?php endforeach; ?>
 
 	<?
   if(is_array($left_arr) && count($left_arr) > 0){
 	?>
 	<div id="col-1" class="col">
 		<?
-	  foreach($left_arr as $lk => $lv){
+    foreach($left_arr as $lk => $lv){
 		?>
-			<a>
-			<span></span>
-			<picture>
-				<img src='<?=$lv?>' class='art_img'/>
-			</picture>
-			</a>
+		<a>
+		<span></span>
+		<picture>
+		<img src='<?=$lv?>' class='art_img'/>
+		</picture>
+		</a>
 		<?
     }
 		?>
@@ -115,42 +114,37 @@
 	?>
 	<div id="col-2" class="col">
 	<?
-	  foreach($center_arr as $ck => $cv){
+    foreach($center_arr as $ck => $cv){
 	?>
-			<a>
-			<span></span>
-			<picture>
-	  		<img src='<?=$cv?>'  class='art_img'/>
-			</picture>
-			</a>
-
+		<a>
+		<span></span>
+		<picture>
+	  	<img src='<?=$cv?>'  class='art_img'/>
+		</picture>
+		</a>
+	<?
+    } 
+	?>
+	</div>
 	<?
   }
 	?>
-
-	</div>
-	<?
-		}
-	?>
-	
 	<?
   if(is_array($right_arr) && count($right_arr) > 0){
-
 	?>
 	<div id="col-3" class="col">
 	<?
-	  foreach($right_arr as $rk => $rv){
+    foreach($right_arr as $rk => $rv){
 	?>
-			<a>
-			<span></span>
-			<picture>
-				<img src='<?=$rv?>'  class='art_img'/>
-			</picture>
-			</a>
+		<a>
+		<span></span>
+		<picture>
+		<img src='<?=$rv?>'  class='art_img'/>
+		</picture>
+		</a>
 	<?
     }
 	?>
-	
 	</div>
 	<?
   }
@@ -162,8 +156,8 @@
 
 <footer>
 	<div>
-		<img src="img/sign_foot.png" alt="logo">
-		<p>Copyright 2017 Risako Yamada. All Rights Reserved.</p>
+	<img src="img/sign_foot.png" alt="logo">
+	<p>Copyright 2017 Risako Yamada. All Rights Reserved.</p>
 	</div>
 </footer>
 </body>
