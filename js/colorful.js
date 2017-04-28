@@ -42,7 +42,8 @@ $(function(){
       },
       function(){
         /* mouse leave の処理 */
-        $(this).css('box-shadow', '0px 0px 0px 0px ');
+//        $(this).css('box-shadow', '0px 0px 0px 0px ');
+        $(this).css('box-shadow', '0 0 0 0 rgba('+ code +',0.0)');
         $(this).attr({"alt":""});
         $(this).css('color', 'transparent ');
 
