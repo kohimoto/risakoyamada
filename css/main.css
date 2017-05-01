@@ -53,7 +53,28 @@ header li:nth-child(1){
 header li a{
   color:#222;
 }
-
+@media (max-width: 768px) {
+  header .wrap {
+    padding: 2em 0 1.5em;
+}
+  header .wrap p{
+    margin: 0 0 0.5em;
+  }
+  header ul{
+    float: left;
+  }
+  header li{
+    font-size: 20px;
+    padding: 0 20px 10px 0;
+  }
+  header li:nth-child(3){
+    padding-right: 40px;
+  }
+  header li:nth-child(4){
+    padding-left: 0;
+    clear: both;
+  }
+}
 /*-- footer --*/
 footer{
   color:#fff;
