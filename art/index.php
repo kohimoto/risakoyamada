@@ -11,6 +11,10 @@
  *
  * @var bool
  */
+
+header('location: /index.html');
+exit();
+
 define('WP_USE_THEMES', true);
 
 /** Loads the WordPress Environment and Template */
