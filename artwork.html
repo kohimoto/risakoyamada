@@ -39,7 +39,9 @@
 <link rel="stylesheet" href="/css/css-classes.min.css">
 
 <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/velocity.min.js"></script>
 <script type="text/javascript" src="/js/colorful.js"></script>
+<script type="text/javascript" src="/js/nav.js"></script>
 </head>
 
 <div id="disp_img">
@@ -51,17 +53,37 @@
 
 <body class="home page page-id-16 page-template-default">
 <header>
-	<div class="container">
-	<p>Risako Yamada</p>
-	<ul>
-		<li><a href="" class="element linethrough-right">Top</a></li>
-		<li><a href="" class="element2 linethrough-right">About</a></li>
-		<li><a href="" class="element3 linethrough-right">Artwork</a></li>
-		<li><a href="" class="element4 linethrough-right">Exhibition</a></li>
-		<li><a href="" class="element5 linethrough-right">Shop</a></li>
-		<li><a href="" class="element6 linethrough-right">Contact</a></li>
-	</ul>
-	</div>
+
+<div class="overlay-navigation">
+<nav role="navigation">
+<ul>
+	<li><a href="#" data-content="The beginning">Home</a></li>
+	<li><a href="#" data-content="Curious?">About</a></li>
+	<li><a href="#" data-content="I got game">Skills</a></li>
+	<li><a href="#" data-content="Only the finest">Works</a></li>
+	<li><a href="#" data-content="Don't hesitate">Contact</a></li>
+</ul>
+</nav>
+</div>
+<section>
+<div class="open-overlay">
+<span class="bar-top"></span>
+<span class="bar-middle"></span>
+<span class="bar-bottom"></span>
+</div>
+</section>
+
+<div class="wrap">
+<p>Risako Yamada</p>
+<ul>
+	<li><a href="" class="element linethrough-right">Top</a></li>
+	<li><a href="" class="element2 linethrough-right">About</a></li>
+	<li><a href="" class="element3 linethrough-right">Artwork</a></li>
+	<li><a href="" class="element4 linethrough-right">Exhibition</a></li>
+	<li><a href="" class="element5 linethrough-right">Shop</a></li>
+	<li><a href="" class="element6 linethrough-right">Contact</a></li>
+</ul>
+</div>
 </header>
 
 <main>
@@ -123,7 +145,7 @@
 		</picture>
 		</a>
 	<?
-    } 
+    }
 	?>
 	</div>
 	<?
