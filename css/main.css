@@ -5,16 +5,21 @@ ul li, ol li {
     margin-bottom: 0;
 }
 /*----top----*/
+
+
+
+
 /*----contents----*/
 body {
   font-family: 'Gentium Basic', serif;
   cursor: url(../img/cursor.png), default;
+  color: #fff;
 }
 header{
-  background-image: url(../img/head_bg.png);
+  /*background-image: url(../img/head_bg.png);*/
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 110;
   cursor: default;
 }
 header .container{
@@ -23,7 +28,7 @@ header .container{
   margin-right: auto;
   max-width: 120rem;
   width: 80%;
-  padding: 2em 0;
+  padding: 5em 0 1em;
 }
 header .container p{
   float: left;
@@ -39,12 +44,13 @@ header ul{
 header li{
   display: inline-block;
   font-size: 24px;
-  padding-left: 30px;
+  padding-left: 36px;
 }
 header li:nth-child(1){
   padding-left: 0;
 }
 header li a{
+  color:#222;
 }
 footer{
   color:#fff;
@@ -61,6 +67,20 @@ footer img{
 }
 footer p{
   font-size: 14px;
+}
+/*-- artwork --*/
+#col-1:{
+  position:relative;
+}
+#col-1::after{
+  border-left: 1px solid #fff;
+  position:absolute;
+  left:50%;
+  top:0;
+}
+
+.image-grid {
+    padding-top: 16rem;
 }
 .title{
     position: relative;
