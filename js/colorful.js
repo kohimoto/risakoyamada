@@ -2,7 +2,7 @@ $(function(){
 
   $('.image-grid img').hover(
     function(){
-        /* mouse enter の処理 */
+        /* mouse enter */
         color_class = new Array();
         color_class["1"] = "c_1";
         color_class["2"] = "c_2";
@@ -41,7 +41,7 @@ $(function(){
 
       },
       function(){
-        /* mouse leave の処理 */
+        /* mouse leave */
 //        $(this).css('box-shadow', '0px 0px 0px 0px ');
         $(this).css('box-shadow', '0 0 0 0 rgba('+ code +',0.0)');
         $(this).attr({"alt":""});
@@ -55,8 +55,8 @@ $(function(){
     $('.art_img').click(function(e){
 //      color = $(this).css('box-shadow');
       color = $(this).css('background-color');
-    h = $(window).height();
-    $('#disp_img').css('min-height',h);
+      h = $(window).height();
+      $('#disp_img').css('min-height',h);
       $('#disp_img').css('display','block');
       $('main').css('display','none');
       $('header').css('display','none');
@@ -71,9 +71,7 @@ $(function(){
       code = code.split(",");
       code = code[0]+","+ code[1]+","+code[2];
       $('#disp_img').css('background-color','rgba('+ code +',1)');
-//      e_h = $('body').scrollTop();
-      //y = e.screenY;
-      y = window.pageYOffset ;  // Y方向 (縦)
+      y = window.pageYOffset ; 
 
       $('body').scrollTop(0);
       $('html').scrollTop(0);
@@ -87,10 +85,6 @@ $(function(){
       $('html').scrollTop(y);
       $('.image-grid img').css('box-shadow', '0px 0px 0px 0px ');
     });
-
-
-
-
 
 
 });
