@@ -172,6 +172,7 @@
 	transition: color 1s ease;
 }
 
+.hover_artwork,
 .element3:hover,
 .element3:focus {
 	outline: 0;
@@ -200,6 +201,7 @@
 	transition: all 1s ease; /* add delay if wanted */	
 }
 
+.hover_artwork:after,
 .element3:hover:after,
 .element3:focus:after {
 	outline: 0;
@@ -211,6 +213,7 @@
 	        transition:  all 1s ease; /* add delay if wanted */
 }
 
+.hover_artwork:before,
 .element3:hover:before,
 .element3:focus:before {
 	outline: 0;
@@ -220,6 +223,18 @@
 	    -ms-transition:  all 1s ease; /* add delay if wanted */
 	     -o-transition:  all 1s ease; /* add delay if wanted */
 	        transition:  all 1s ease; /* add delay if wanted */
+}
+
+.hover_artwork:after{
+	width: 3px;
+	height: 3px;
+	left: 0;
+	top: 45%;
+	z-index: 9;
+	content: "";
+	position: absolute;
+	width: 100% !important;
+	height: 3px;
 }
 
 /* elements4*/

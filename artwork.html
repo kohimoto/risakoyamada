@@ -56,7 +56,7 @@
 <ul>
 	<li><a href="" class="element linethrough-right">Top</a></li>
 	<li><a href="" class="element2 linethrough-right">About</a></li>
-	<li><a href="" class="element3 linethrough-right">Artwork</a></li>
+	<li><a href="" class="element3 linethrough-right hover_artwork">Artwork</a></li>
 	<li><a href="" class="element4 linethrough-right">Exhibition</a></li>
 	<li><a href="" class="element5 linethrough-right">Shop</a></li>
 	<li><a href="" class="element6 linethrough-right">Contact</a></li>
@@ -80,7 +80,8 @@
     $sp_flg = 1;
   }
 
-  $n_posts = query_posts();
+  //$n_posts = query_posts();
+  $n_posts = query_posts('&posts_per_page=12&paged='.$paged);
   $img_num = 0;
   foreach ($n_posts as $n_p) :
     $n_img = get_field("artw_img", $n_p->ID);
@@ -178,7 +179,28 @@ if($sp_flg !== 1){
 </main>
 
 <div class="pager">
-	<><>
+	<?php global $wp_rewrite;
+	//$paginate_base = get_pagenum_link(1);
+	$paginate_base = "/?page=1";
+	if(strpos($paginate_base, '?') || ! $wp_rewrite->using_permalinks()){
+		$paginate_format = '';
+		$paginate_base = add_query_arg('paged','%#%');
+	}
+	else{
+		$paginate_format = (substr($paginate_base,-1,1) == '/' ? '' : '/') .
+		user_trailingslashit('page/%#%/','paged');;
+		$paginate_base .= '%_%';
+	}
+	echo paginate_links(array(
+		'base' => $paginate_base,
+		//'format' => $paginate_format,
+		'format' => '?paged=%#%',
+		'total' => $wp_query->max_num_pages,
+		'mid_size' => 4,
+		'current' => ($paged ? $paged : 1),
+		'prev_text' => '«',
+		'next_text' => '»',
+	)); ?>
 </div>
 
 <footer>

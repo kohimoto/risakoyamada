@@ -9,7 +9,6 @@ ul li, ol li {
 
 
 
-
 /*----contents----*/
 body {
   /*font-family: 'Gentium Basic', serif;*/
@@ -92,6 +91,7 @@ footer img{
 footer p{
   font-size: 14px;
 }
+
 /*-- artwork --*/
 .image-grid {
     padding-top: 16rem;
@@ -138,4 +138,14 @@ h1.entry-title{
   margin: 0 auto;
   width: 100%;
   padding: 10em 0;
+}
+
+/*-- pager --*/
+.pager{
+  color: #fff;
+  font-size: 80px;
+}
+.pager a{
+  color: #fff;
+  font-size: 80px;
 }

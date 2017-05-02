@@ -12,8 +12,8 @@
  * @var bool
  */
 
-header('location: /index.html');
-exit();
+//header('location: /index.html');
+//exit();
 
 define('WP_USE_THEMES', true);
 
