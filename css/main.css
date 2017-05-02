@@ -140,18 +140,12 @@ h1.entry-title{
   padding: 10em 0;
 }
 
-/*-- shop --*/
-.shop_img{
-  height: 460px;
-}
-
 /*-- pager --*/
 .pager{
   cursor: default;
   text-align: center;
   color: #fff;
-  font-size: 80px;
-
+  font-size: 30px;
 }
 .pager .page-numbers{
   padding:0 10px;
