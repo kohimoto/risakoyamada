@@ -142,10 +142,17 @@ h1.entry-title{
 
 /*-- pager --*/
 .pager{
+  cursor: default;
+  text-align: center;
   color: #fff;
-  font-size: 80px;
+  font-size: 30px;
+
+}
+.pager .page-numbers{
+  padding:0 10px;
 }
 .pager a{
   color: #fff;
-  font-size: 80px;
+  font-size: 20px;
+  padding:0 1em;
 }
