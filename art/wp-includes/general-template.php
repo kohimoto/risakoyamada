@@ -3257,7 +3257,8 @@ function paginate_links( $args = '' ) {
 		'prev_next' => true,
 		'prev_text' => __('&laquo; Previous'),
 		'next_text' => __('Next &raquo;'),
-		'end_size' => 1,
+		//'end_size' => 1,
+		'end_size' => 0,
 		'mid_size' => 2,
 		'type' => 'plain',
 		'add_args' => array(), // array of query args to add
@@ -3298,7 +3299,8 @@ function paginate_links( $args = '' ) {
 	$current  = (int) $args['current'];
 	$end_size = (int) $args['end_size']; // Out of bounds?  Make it the default.
 	if ( $end_size < 1 ) {
-		$end_size = 1;
+		//$end_size = 1;
+		$end_size = 0;
 	}
 	$mid_size = (int) $args['mid_size'];
 	if ( $mid_size < 0 ) {
@@ -3307,7 +3309,8 @@ function paginate_links( $args = '' ) {
 	$add_args = $args['add_args'];
 	$r = '';
 	$page_links = array();
-	$dots = false;
+	//$dots = false;
+	$dots = true;
 
 	if ( $args['prev_next'] && $current && 1 < $current ) :
 		$link = str_replace( '%_%', 2 == $current ? '' : $args['format'], $args['base'] );

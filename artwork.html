@@ -81,7 +81,8 @@
   }
 
   //$n_posts = query_posts();
-  $n_posts = query_posts('&posts_per_page=12&paged='.$paged);
+  //$n_posts = query_posts('&posts_per_page=12&paged='.$paged);
+  $n_posts = query_posts('&posts_per_page=1&paged='.$paged);
   $img_num = 0;
   foreach ($n_posts as $n_p) :
     $n_img = get_field("artw_img", $n_p->ID);
@@ -196,7 +197,7 @@ if($sp_flg !== 1){
 		//'format' => $paginate_format,
 		'format' => '?paged=%#%',
 		'total' => $wp_query->max_num_pages,
-		'mid_size' => 4,
+		'mid_size' => 2,
 		'current' => ($paged ? $paged : 1),
 		'prev_text' => '«',
 		'next_text' => '»',
