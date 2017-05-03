@@ -69,20 +69,22 @@
 <ul>
 	<li><a href="/" class="element linethrough-right">Top</a></li>
 	<li><a href="/about.html" class="element2 linethrough-right">About</a></li>
-	<li><a href="/artwork.html" class="element3 linethrough-right hover_artwork">Artwork</a></li>
+	<li><a href="/artwork.html" class="element3 linethrough-right">Artwork</a></li>
 	<li><a href="/exhibition.html" class="element4 linethrough-right">Exhibition</a></li>
-	<li><a href="/shop.html" class="element5 linethrough-right">Shop</a></li>
+	<li><a href="/shop.html" class="element5 linethrough-right hover_shop">Shop</a></li>
 	<li><a href="/contact.html" class="element6 linethrough-right">Contact</a></li>
 </ul>
 </div>
 </header>
 
-<main class="artwork">
+<main class="shop">
 	<section class="page-homepage">
 	<article class="image-grid home-image-grid">
 	<div class="wrap image-grid-inner">
 
 	<?
+  
+
   //$n_posts = query_posts();
   $n_posts = query_posts('&posts_per_page=12&paged='.$paged);
   //$n_posts = query_posts('&posts_per_page=1&paged='.$paged);
@@ -121,12 +123,13 @@ if($sp_flg !== 1){
 		<?
     foreach($left_arr as $lk => $lv){
 		?>
+		<div class="img_box">
 		<a>
 		<span></span>
-		<picture>
 		<img src='<?=$lv?>' class='art_img'/>
-		</picture>
 		</a>
+		<div>$$$</div>
+		</div>
 		<?
     }
 		?>
@@ -142,12 +145,13 @@ if($sp_flg !== 1){
 	<?
     foreach($center_arr as $ck => $cv){
 	?>
+		<div class="img_box">
 		<a>
 		<span></span>
-		<picture>
 	  	<img src='<?=$cv?>'  class='art_img'/>
-		</picture>
 		</a>
+		<div>$$$</div>
+		</div>
 	<?
     }
 	?>
@@ -162,12 +166,13 @@ if($sp_flg !== 1){
 	<?
     foreach($right_arr as $rk => $rv){
 	?>
+		<div class="img_box">
 		<a>
 		<span></span>
-		<picture>
 		<img src='<?=$rv?>'  class='art_img'/>
-		</picture>
 		</a>
+		<div>$$$</div>
+		</div>
 	<?
     }
 	?>

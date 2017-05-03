@@ -1,6 +1,7 @@
 $(function(){
 
-  $('.image-grid img').hover(
+  //$('.image-grid img').hover(
+  $('.image-grid a').hover(
     function(){
         /* mouse enter */
         color_class = new Array();
@@ -59,6 +60,7 @@ $(function(){
       $('#disp_img').css('min-height',h);
       $('#disp_img').css('display','block');
       $('main').css('display','none');
+      $('.pager').css('display','none');
       $('header').css('display','none');
       $('footer').css('display','none');
       src = $(this).attr('src');
@@ -79,6 +81,7 @@ $(function(){
     $('#close').click(function(){
       $('#disp_img').css('display','none');
       $('main').css('display','block');
+      $('.pager').css('display','block');
       $('header').css('display','block');
       $('footer').css('display','block');
       $('body').scrollTop(y);
