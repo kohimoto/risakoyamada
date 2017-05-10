@@ -268,6 +268,12 @@ h1.entry-title{
   }
 }
 
+@media (max-width: 500px){
+  .exhibition .col .img_box div p{
+    font-size: 1.0rem !important;
+    line-height: 1.3rem !important;
+  }
+}
 /*-- pager --*/
 .pager{
   cursor: default;
