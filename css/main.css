@@ -226,7 +226,7 @@ h1.entry-title{
 }
 
 /*-- exhibition --*/
-.exhibition .image-grid a{
+.exhibition .image-grid .img_box a{
   width: 50%;
   float: left;
   overflow: auto;
