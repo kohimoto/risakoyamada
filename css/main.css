@@ -231,6 +231,9 @@ h1.entry-title{
   float: left;
   overflow: auto;
 }
+.exhibition .img_box div{
+  padding: 0 30px 0;
+}
 
 .exhibition .image-grid .col{
   float: none;
