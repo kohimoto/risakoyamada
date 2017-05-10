@@ -241,6 +241,9 @@ h1.entry-title{
   padding: 0 30px 0;
 }
 
+.exhibition .img_box div a{
+  text-decoration: underline;
+}
 .exhibition .image-grid .col{
   float: none;
   width: 100%;
