@@ -238,7 +238,7 @@ h1.entry-title{
 }
 
 .exhibition .img_box div{
-  padding: 0 30px 0;
+  padding: 0 0 0 30px ;
 }
 
 .exhibition .img_box div a{
@@ -259,6 +259,13 @@ h1.entry-title{
 
 .exhibition .col .img_box{
   clear: both;
+}
+
+@media (max-width: 700px){
+  .exhibition .col .img_box div p{
+    font-size: 1.2rem !important;
+    line-height: 1.7rem !important;
+  }
 }
 
 /*-- pager --*/
