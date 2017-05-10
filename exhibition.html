@@ -85,31 +85,42 @@
 	<?
   
 
-  //$n_posts = query_posts();
-  $n_posts = query_posts('&posts_per_page=12&paged='.$paged);
-  //$n_posts = query_posts('&posts_per_page=1&paged='.$paged);
+  $post_arr = array(
+    'paged'  => $paged,
+    'category__in'  => array(4), //Exhibition
+    'posts_per_page'  => '12'
+  );
+  $n_posts = query_posts($post_arr);
+
   $img_num = 0;
   foreach ($n_posts as $n_p) :
-    $n_img = get_field("artw_img", $n_p->ID);
+    $n_img = get_field("ex_img", $n_p->ID);
+    $ex_text = get_field("ex_text", $n_p->ID);
       if(strlen($n_img["url"]) > 0){
         $img_num++;
 if($sp_flg !== 1){
 
         if($img_num % 3 == 1){
-          $left_arr[$img_num] = $n_img["url"];
+          $left_arr[$img_num]["img"] = $n_img["url"];
+          $left_arr[$img_num]["ex_text"] = $ex_text;
         }else if($img_num % 3 == 2){
-          $center_arr[$img_num] = $n_img["url"];
+          $center_arr[$img_num]["img"] = $n_img["url"];
+          $center_arr[$img_num]["ex_text"] = $ex_text;
         }else if($img_num % 3 == 0){
-          $right_arr[$img_num] = $n_img["url"];
+          $right_arr[$img_num]["img"] = $n_img["url"];
+          $right_arr[$img_num]["ex_text"] = $ex_text;
         }
 }else{
   //SP
   if((1 <= $img_num) && ( $img_num <= 4)){
-    $left_arr[$img_num] = $n_img["url"];
+    $left_arr[$img_num]["img"] = $n_img["url"];
+    $left_arr[$img_num]["ex_text"] = $ex_text;
   }elseif((5 <= $img_num ) && ($img_num <= 8)){
-    $center_arr[$img_num] = $n_img["url"];
+    $center_arr[$img_num]["img"]  = $n_img["url"];
+    $center_arr[$img_num]["ex_text"] = $ex_text;
   }elseif((9 <= $img_num ) && ($img_num <= 12)){
-    $right_arr[$img_num] = $n_img["url"];
+    $right_arr[$img_num]["img"]  = $n_img["url"];
+    $right_arr[$img_num]["ex_text"] = $ex_text;
   }
 }
       }
@@ -126,17 +137,9 @@ if($sp_flg !== 1){
 		<div class="img_box">
 		<a>
 		<span></span>
-		<img src='<?=$lv?>' class='art_img'/>
+		<img src='<?=$lv["img"] ?>' class='art_img'/>
 		</a>
-		<div>November 15th(Sun)-25th(Wed)
-<br>
-1:00pm-9:00pm
-<br>
-Please e-mail
-<br>
-risarisa.ww@gmail.com
-<br>
-I send the details.</div>
+		<div><?=$lv["ex_text"] ?></div>
 		</div>
 		<?
     }
@@ -156,17 +159,9 @@ I send the details.</div>
 		<div class="img_box">
 		<a>
 		<span></span>
-	  	<img src='<?=$cv?>'  class='art_img'/>
+	  	<img src='<?=$cv["img"] ?>'  class='art_img'/>
 		</a>
-		<div>November 15th(Sun)-25th(Wed)
-<br>
-1:00pm-9:00pm
-<br>
-Please e-mail
-<br>
-risarisa.ww@gmail.com
-<br>
-I send the details.</div>
+		<div><?=$cv["ex_text"] ?></div>
 		</div>
 	<?
     }
@@ -185,17 +180,9 @@ I send the details.</div>
 		<div class="img_box">
 		<a>
 		<span></span>
-		<img src='<?=$rv?>'  class='art_img'/>
+		<img src='<?=$rv["img"] ?>'  class='art_img'/>
 		</a>
-		<div>November 15th(Sun)-25th(Wed)
-<br>
-1:00pm-9:00pm
-<br>
-Please e-mail
-<br>
-risarisa.ww@gmail.com
-<br>
-I send the details.</div>
+		<div><?=$rv["ex_text"] ?></div>
 		</div>
 	<?
     }

@@ -83,9 +83,13 @@
 	<div class="wrap image-grid-inner">
 
 	<?
-  //$n_posts = query_posts();
-  $n_posts = query_posts('&posts_per_page=12&paged='.$paged);
-  //$n_posts = query_posts('&posts_per_page=1&paged='.$paged);
+  $post_arr = array(
+    'paged'  => $paged,
+    'category__in'  => array(2), //Artwork
+    'posts_per_page'  => '12'
+  );
+  $n_posts = query_posts($post_arr);
+
   $img_num = 0;
   foreach ($n_posts as $n_p) :
     $n_img = get_field("artw_img", $n_p->ID);
