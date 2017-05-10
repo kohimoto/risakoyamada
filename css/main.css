@@ -226,11 +226,17 @@ h1.entry-title{
 }
 
 /*-- exhibition --*/
-.exhibition .image-grid .img_box a{
+.exhibition a{
+  color: #fff;
+  display: inline;
+}
+
+.exhibition .image-grid  a.img_a{
   width: 50%;
   float: left;
   overflow: auto;
 }
+
 .exhibition .img_box div{
   padding: 0 30px 0;
 }

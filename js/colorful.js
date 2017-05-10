@@ -1,7 +1,8 @@
 $(function(){
 
   //$('.image-grid img').hover(
-  $('.image-grid a').hover(
+  //$('.image-grid a').hover(
+  $('.image-grid .img_a').hover(
     function(){
         /* mouse enter */
         color_class = new Array();
