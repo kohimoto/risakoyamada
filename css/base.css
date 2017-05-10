@@ -97,6 +97,7 @@
 	transition: color 1s ease;
 }
 
+.hover_about,
 .element2:hover,
 .element2:focus {
 	outline: 0;
@@ -125,6 +126,7 @@
 	transition: all 1s ease; /* add delay if wanted */	
 }
 
+.hover_about:after,
 .element2:hover:after,
 .element2:focus:after {
 	outline: 0;
@@ -136,6 +138,7 @@
 	        transition:  all 1s ease; /* add delay if wanted */
 }
 
+.hover_about:before,
 .element2:hover:before,
 .element2:focus:before {
 	outline: 0;
@@ -145,6 +148,17 @@
 	    -ms-transition:  all 1s ease; /* add delay if wanted */
 	     -o-transition:  all 1s ease; /* add delay if wanted */
 	        transition:  all 1s ease; /* add delay if wanted */
+}
+.hover_about:after{
+	width: 3px;
+	height: 3px;
+	left: 0;
+	top: 45%;
+	z-index: 9;
+	content: "";
+	position: absolute;
+	width: 100% !important;
+	height: 3px;
 }
 
 /* elements3*/
@@ -440,6 +454,7 @@
 	transition: color 1s ease;
 }
 
+.hover_contact,
 .element6:hover,
 .element6:focus {
 	outline: 0;
@@ -468,6 +483,7 @@
 	transition: all 1s ease; /* add delay if wanted */	
 }
 
+.hover_contact:after,
 .element6:hover:after,
 .element6:focus:after {
 	outline: 0;
@@ -479,6 +495,7 @@
 	        transition:  all 1s ease; /* add delay if wanted */
 }
 
+.hover_contact:before,
 .element6:hover:before,
 .element6:focus:before {
 	outline: 0;
@@ -488,5 +505,17 @@
 	    -ms-transition:  all 1s ease; /* add delay if wanted */
 	     -o-transition:  all 1s ease; /* add delay if wanted */
 	        transition:  all 1s ease; /* add delay if wanted */
+}
+
+.hover_contact:after{
+	width: 3px;
+	height: 3px;
+	left: 0;
+	top: 45%;
+	z-index: 9;
+	content: "";
+	position: absolute;
+	width: 100% !important;
+	height: 3px;
 }
 
