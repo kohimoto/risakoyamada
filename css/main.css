@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*@import url(https://fonts.googleapis.com/css?family=Gentium+Basic:700);*/
 @import url(https://fonts.googleapis.com/css?family=Vollkorn);
+
 /*----reset----*/
 ul li, ol li {
     margin-bottom: 0;
@@ -12,7 +13,7 @@ ul li, ol li {
 /*----contents----*/
 body {
   /*font-family: 'Gentium Basic', serif;*/
-  font-family: 'Vollkorn', serif;
+  font-family: 'Vollkorn', serif, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3';
   cursor: url(../img/cursor.png), default;
   color: #fff;
 }
@@ -22,17 +23,17 @@ header{
   width: 100%;
   z-index: 110;
   cursor: default;
-  border-bottom: 1px solid #222;
+  /*border-bottom: 1px solid #222;*/
 }
 header .wrap{
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  padding: 3em 0 2.5em;
+  padding: 4em 0 2.5em;
 }
 header .wrap p{
   float: left;
-  font-size: 28px;
+  font-size: 32px;
   margin: 0;
 }
 header ul{
@@ -43,7 +44,7 @@ header ul{
 }
 header li{
   display: inline-block;
-  font-size: 22px;
+  font-size: 32px;
   padding-left: 32px;
 }
 header li:nth-child(1){
@@ -84,6 +85,7 @@ footer div{
   margin-bottom: 50px;
 }
 footer img{
+  display: none;
   width: 34px;
   height: 78px;
   margin: 0 auto 20px;
@@ -254,7 +256,7 @@ h1.entry-title{
   width: 50%;
   float: left;
   text-align: left;
-  word-break: break-all; 
+  word-break: break-all;
 }
 
 .exhibition .col .img_box{
@@ -295,6 +297,7 @@ h1.entry-title{
 
 /*-- pager --*/
 .pager{
+  padding: 3em 0;
   cursor: default;
   text-align: center;
   color: #fff;
