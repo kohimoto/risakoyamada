@@ -14,7 +14,7 @@ html, body {
 }
 #wrap{
   height: 100%;
-  border: 10px solid #ff0;
+  border: 20px solid #333;
 }
 nav{
   position: fixed;
@@ -22,6 +22,9 @@ nav{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+.menu{
+  background-color: #fff;
 }
 .top_bg{
   height: 100%;
@@ -77,4 +80,7 @@ nav{
     height: 50px;
     border-left: none;
   }
+}
+.top_bg img{
+  width: 100%;
 }
