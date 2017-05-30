@@ -114,8 +114,9 @@ footer p.copyright a:hover{
   }
   nav{
     background-image: none;
-    padding: 40px 20px;
+    padding: 30px;
     border: 4px solid #000;
+    background-color: #fff;
   }
   .top_bg ul {
   height: auto;
