@@ -78,22 +78,6 @@ nav{
 .menu-table ul li a:focus{
   text-decoration: none;
 }
-/*----- TOP-sp -----*/
-@media (max-width: 768px) {
-  #wrap{
-    display: table;
-    width: 100%;
-  }
-  .top_bg ul {
-  height: auto;
-  border-top: none;
-}
-  .top_bg ul li{
-    float: none;
-    height: 50px;
-    border-left: none;
-  }
-}
 .top_bg img{
   width: 100%;
 }
@@ -118,4 +102,25 @@ footer p.copyright a{
 footer p.copyright a:hover{
   color: #1EEA77;
   text-decoration: none;
+}
+
+/*----- TOP-sp -----*/
+@media (max-width: 768px) {
+  #wrap{
+    display: table;
+    width: 100%;
+  }
+  .top_bg ul {
+  height: auto;
+  border-top: none;
+}
+  .top_bg ul li{
+    float: none;
+    height: 50px;
+    border-left: none;
+  }
+  .top_bg ul li {
+      width: 100%;
+      height: auto;
+  }
 }
