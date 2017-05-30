@@ -106,9 +106,16 @@ footer p.copyright a:hover{
 
 /*----- TOP-sp -----*/
 @media (max-width: 768px) {
+
   #wrap{
     display: table;
     width: 100%;
+    border: 20px solid #fff;
+  }
+  nav{
+    background-image: none;
+    padding: 40px 20px;
+    border: 4px solid #000;
   }
   .top_bg ul {
   height: auto;
@@ -123,4 +130,5 @@ footer p.copyright a:hover{
       width: 100%;
       height: auto;
   }
+
 }
