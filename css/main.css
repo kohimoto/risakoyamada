@@ -1,14 +1,10 @@
 @charset "UTF-8";
-/*@import url(https://fonts.googleapis.com/css?family=Gentium+Basic:700);*/
 @import url(https://fonts.googleapis.com/css?family=Vollkorn);
-
 /*----reset----*/
 ul li, ol li {
     margin-bottom: 0;
 }
 /*----top----*/
-
-
 
 /*----contents----*/
 body {
@@ -92,6 +88,12 @@ footer img{
 }
 footer p{
   font-size: 14px;
+}
+footer p.copyright a{
+  color: #fff;
+}
+footer p.copyright a:hover{
+  color: #1EEA77;
 }
 
 /*-- artwork --*/

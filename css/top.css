@@ -10,11 +10,11 @@ li{
 /*----- TOP -----*/
 html, body {
   height: 100%;
-  font-family: 'Vollkorn', serif, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3';
+  font-family: 'Vollkorn', serif, 'Hiragino Kaku Gothic ProN', '?????? ProN W3';
 }
 #wrap{
   height: 100%;
-  border: 20px solid #333;
+  border: 50px solid #fff;
 }
 nav{
   position: fixed;
@@ -22,9 +22,15 @@ nav{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  /*background-color: #fff;*/
+  background-image: url(../img/head_bg_01.gif);
+  padding: 50px;
+  opacity: 0.8;
+  border: 8px solid #000;
 }
 .menu{
-  background-color: #fff;
+
+
 }
 .top_bg{
   height: 100%;
@@ -35,13 +41,13 @@ nav{
   overflow: hidden;
   margin: 0;
   padding: 0;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #333;
 }
 .top_bg ul li{
   width:14.2857%;
   height: 100%;
   float: left;
-  border-left: 1px solid #fff;
+  border-left: 1px solid #333;
 }
 .top_bg ul:nth-child(1) {
   border-top: none;
@@ -50,13 +56,20 @@ nav{
   border-left:none;
 }
 .nav-table h1{
-  color: #fff;
+  color: #000;
+  font-size: 50px;
+  opacity: 1;
+}
+.menu-table ul{
+  padding: 0;
+  text-align: center;
 }
 .menu-table ul li{
-  font-size: 32px;
+  font-size: 28px;
+  opacity: 1;
 }
 .menu-table ul li a{
-  color: #fff;
+  color: #000;
 }
 .menu-table ul li a.hover_top{
 	color: #1EEA77;
@@ -83,4 +96,26 @@ nav{
 }
 .top_bg img{
   width: 100%;
+}
+/*-- footer --*/
+footer{
+  color:#000;
+  text-align: center;
+  margin: 120px 0 0px;
+}
+footer div{
+}
+footer img{
+  display: none;
+}
+footer p{
+  font-size: 14px;
+  margin: 0;
+}
+footer p.copyright a{
+  color: #000;
+}
+footer p.copyright a:hover{
+  color: #1EEA77;
+  text-decoration: none;
 }

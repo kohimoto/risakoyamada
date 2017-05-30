@@ -56,7 +56,7 @@
 </head>
 
 <div id="disp_img">
-<div><div id="close">Ã—</div></div>
+<div><div id="close">×</div></div>
 <div class="img_s">
 <img src="">
 </div>
@@ -206,15 +206,15 @@ if($sp_flg !== 1){
 		'total' => $wp_query->max_num_pages,
 		'mid_size' => 2,
 		'current' => ($paged ? $paged : 1),
-		'prev_text' => 'Â«',
-		'next_text' => 'Â»',
+		'prev_text' => '«',
+		'next_text' => '»',
 	)); ?>
 </div>
 
 <footer>
 	<div>
 	<img src="img/sign_foot.png" alt="logo">
-	<p>Copyright 2017 Risako Yamada. All Rights Reserved.</p>
+	<p class="copyright">Copyright &copy; 2017 Risako Yamada. All Rights Reserved. Designed by <a href="http://kohimoto.com/" target="_blank">kohimoto</a>.</p>
 	</div>
 </footer>
 </body>
