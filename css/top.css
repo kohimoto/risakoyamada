@@ -10,11 +10,13 @@ li{
 /*----- TOP -----*/
 html, body {
   height: 100%;
-  font-family: 'Vollkorn', serif, 'Hiragino Kaku Gothic ProN', '?????? ProN W3';
+  font-family: 'Vollkorn', serif, 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic ProN W3';
 }
 #wrap{
   height: 100%;
-  border: 50px solid #fff;
+  border: 30px solid #fff;
+  background-image: url(../img/top_bg.gif);
+  background-position: left 0;
 }
 nav{
   position: fixed;
@@ -22,10 +24,10 @@ nav{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  /*background-color: #fff;*/
-  background-image: url(../img/head_bg_01.gif);
+  background-color: #fff;
+  /*background-image: url(../img/head_bg_01.gif);*/
   padding: 50px;
-  opacity: 0.8;
+  opacity: 1;
   border: 8px solid #000;
 }
 .menu{
@@ -70,6 +72,7 @@ nav{
 }
 .menu-table ul li a{
   color: #000;
+  opacity: 1;
 }
 .menu-table ul li a.hover_top{
 	color: #1EEA77;
@@ -77,6 +80,10 @@ nav{
 .menu-table ul li a:hover,
 .menu-table ul li a:focus{
   text-decoration: none;
+  opacity: 1;
+}
+.menu-table ul li.nav_sign{
+  padding-top: 20px;
 }
 .top_bg img{
   width: 100%;
@@ -85,7 +92,7 @@ nav{
 footer{
   color:#000;
   text-align: center;
-  margin: 120px 0 0px;
+  margin: 0;
 }
 footer div{
 }
@@ -93,6 +100,7 @@ footer img{
   display: none;
 }
 footer p{
+  line-height: 2em;
   font-size: 14px;
   margin: 0;
 }
@@ -110,11 +118,11 @@ footer p.copyright a:hover{
   #wrap{
     display: table;
     width: 100%;
-    border: 20px solid #fff;
+    border: 6px solid #fff;
   }
   nav{
     background-image: none;
-    padding: 30px;
+    padding: 20px 30px;
     border: 4px solid #000;
     background-color: #fff;
   }
@@ -131,5 +139,38 @@ footer p.copyright a:hover{
       width: 100%;
       height: auto;
   }
-
+  .menu-table ul li {
+      font-size: 20px;
+  }
+  .nav-table h1 {
+      font-size: 30px;
+      text-align: center;
+  }
+  footer{
+    color:#000;
+    text-align: center;
+    margin: 10px 20px;
+  }
+  footer p{
+    line-height: 1em;
+}
+}
+/*----- loading -----*/
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  z-index: 1;
+  margin 0 auto;
+}
+#loader {
+  display: none;
+  position: relative;
+  top: 45%;
+  z-index: 2;
+  text-align: center;
 }
