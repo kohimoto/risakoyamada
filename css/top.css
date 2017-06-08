@@ -27,7 +27,8 @@ nav{
   background-color: none;
   /*background-image: url(../img/top_bg.gif);*/
   /*background-image: url(../img/head_bg_01.gif);*/
-  /*padding: 50px;*/
+  padding: 50px;
+  /*background-color: #000;*/
   opacity: 1;
   /*border: 1px solid #fff;*/
 }
@@ -122,6 +123,9 @@ footer p.copyright a:hover{
   }
 }
 @media (max-width: 768px) {
+  #wrap{
+    border: 5px solid #1eea77;
+  }
   .top_bg ul li img{
     width: auto;
     height: 100%;
