@@ -284,6 +284,9 @@ h1.entry-title{
   cursor: pointer;
   padding-bottom: 30px;
 }
+.contact .icon p{
+  padding-bottom: 20px;
+}
 
 .contact .mail img{
   width: 30px;
