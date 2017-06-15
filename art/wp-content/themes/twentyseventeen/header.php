@@ -47,27 +47,34 @@
 <script src="/js/picturefill.min.js" async="true"></script>
 <link rel='stylesheet' id='main-css'  href='/css/master.css' type='text/css' media='screen' />
 <link rel='stylesheet' id='main-css'  href='/css/main.css' type='text/css' media='screen' />
-<link rel="canonical" href="" />
+<!-- hover -->
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/css-classes.min.css">
+
 <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
-
-<!-- lity-->
-<link rel='stylesheet' id='main-css'  href='/css/lity.css' type='text/css' media='screen' />
-<script type="text/javascript" src="/js/lity.js"></script>
-
 <script type="text/javascript" src="/js/colorful.js"></script>
+
+
 </head>
+
+<div id="disp_img">
+<div><div id="close">×</div></div>
+<div class="img_s">
+<img src="">
+</div>
+</div>
 
 <body class="home page page-id-16 page-template-default">
 <header>
-	<div class="container">
-		<p>Risako Yamada</p>
-		<ul>
-			<li>Top</li>
-			<li>About</li>
-			<li>Artwork</li>
-			<li>Exhibition</li>
-			<li>Shop</li>
-			<li>Contact</li>
-		</ul>
-	</div>
+<div class="wrap">
+<p>Risako Yamada</p>
+<ul>
+	<li><a href="/" class="element linethrough-right">Top</a></li>
+	<li><a href="/about.html" class="element2 linethrough-right">About</a></li>
+	<li><a href="/artwork.html" class="element3 linethrough-right hover_artwork">Artwork</a></li>
+	<li><a href="/exhibition.html" class="element4 linethrough-right">Exhibition</a></li>
+	<li><a href="/shop.html" class="element5 linethrough-right">Shop</a></li>
+	<li><a href="/contact.html" class="element6 linethrough-right">Contact</a></li>
+</ul>
+</div>
 </header>

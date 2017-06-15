@@ -15,8 +15,8 @@
 ?>
 <footer>
 	<div>
-		<img src="/img/sign_foot.png" alt="logo">
-		<p>Copyright 2017 Risako Yamada. All Rights Reserved.</p>
+	<img src="img/sign_foot.png" alt="logo">
+	<p class="copyright">Copyright &copy; 2017 Risako Yamada. All Rights Reserved. Designed by <a href="http://kohimoto.com/" target="_blank">kohimoto</a>.</p>
 	</div>
 </footer>
 </body>

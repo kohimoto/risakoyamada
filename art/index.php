@@ -1,4 +1,11 @@
 <?php
+//2017.06.15 kohinata
+//preview意外,art配下にアクセスされたら直下にリダイレクト
+$access_url = $_SERVER["REQUEST_URI"];
+if(!preg_match("/2017/", $access_url)){
+  header('location: /');
+  exit();
+}
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
  * wp-blog-header.php which does and tells WordPress to load the theme.
