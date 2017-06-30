@@ -103,7 +103,7 @@ nav{
 .menu-table-color {
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 234, 119, 0.5);
+  background-color: rgba(30, 234, 119, 0.4);
 }
 .top .hover_top::after {
   background-color: #fff;
