@@ -26,8 +26,8 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-//define('DB_NAME', 'kohimoto_risakoyamada_dev');
-define('DB_NAME', 'kohimoto_risakoyamada');
+define('DB_NAME', 'kohimoto_risakoyamada_dev');
+//define('DB_NAME', 'kohimoto_risakoyamada');
 
 /** MySQL データベースのユーザー名 */
 define('DB_USER', 'kohimoto');
@@ -36,8 +36,8 @@ define('DB_USER', 'kohimoto');
 define('DB_PASSWORD', 'kohimoto_manage');
 
 /** MySQL のホスト名 */
-//define('DB_HOST', 'mysql537.db.sakura.ne.jp');
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql537.db.sakura.ne.jp');
+//define('DB_HOST', 'localhost');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
 define('DB_CHARSET', 'utf8mb4');
