@@ -70,10 +70,6 @@ nav{
   text-align: center;
 }
 .menu-table{
-  background-image: url(../img/top/top.gif);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center center;
   margin: 0 1em 3em;
 }
 
@@ -170,6 +166,12 @@ footer p.copyright a:hover{
       font-size: 30px;
       text-align: center;
       padding: 0 0 0.5em;
+  }
+  .menu-table{
+    background-image: url(../img/top/top.gif);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   .menu-table ul{
     padding: 0 0 1em;
