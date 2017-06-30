@@ -96,11 +96,6 @@ nav{
 .menu-table ul li.nav_sign{
   padding-top: 20px;
 }
-.menu-table-color {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(30, 234, 119, 0.4);
-}
 .top .hover_top::after {
   background-color: #fff;
 }
@@ -172,6 +167,11 @@ footer p.copyright a:hover{
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+  .menu-table-color {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 234, 119, 0.4);
   }
   .menu-table ul{
     padding: 0 0 1em;
